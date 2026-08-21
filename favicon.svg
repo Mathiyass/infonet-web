@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="favGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00a651"/>
+      <stop offset="100%" stop-color="#007230"/>
+    </linearGradient>
+    <linearGradient id="favCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b4d8"/>
+      <stop offset="100%" stop-color="#0077b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#09090b"/>
+  <!-- Orbital Swoosh -->
+  <path d="M 12 48 C 2 36 6 18 24 10 C 34 5 46 8 50 11 C 38 12 26 17 20 26 C 14 36 17 46 12 48 Z" fill="url(#favCyan)" />
+  <polygon points="46,6 54,12 44,16" fill="url(#favCyan)" />
+  <!-- Infonet 'i' -->
+  <circle cx="28" cy="22" r="5" fill="#e11d2a"/>
+  <rect x="23" y="30" width="10" height="22" rx="4" fill="url(#favGreen)"/>
+  <!-- Orbit dot -->
+  <circle cx="45" cy="38" r="4" fill="#00a651"/>
+</svg>

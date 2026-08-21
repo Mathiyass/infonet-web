@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="infonetGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00a651" />
+      <stop offset="100%" stop-color="#008037" />
+    </linearGradient>
+    <linearGradient id="swooshCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b4d8" />
+      <stop offset="100%" stop-color="#0077b6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Orbital Swooshes around the I -->
+  <path d="M 30 85 C 10 70 12 35 42 22 C 60 14 78 20 85 24 C 65 24 45 32 36 46 C 26 62 30 78 30 85 Z" fill="url(#swooshCyanGrad)" opacity="0.9" />
+  <path d="M 45 92 C 18 78 22 42 55 28 C 72 20 90 26 95 30 C 76 29 55 38 46 54 C 38 68 44 85 45 92 Z" fill="#009640" opacity="0.8" />
+  
+  <!-- Arrow Head -->
+  <polygon points="82,18 96,28 80,34" fill="url(#swooshCyanGrad)" />
+
+  <!-- INFONET Text in Stylized Lowercase/Curved Font -->
+  <text x="65" y="72" font-family="'Montserrat', 'Poppins', sans-serif" font-size="64" font-weight="900" fill="url(#infonetGreenGrad)" letter-spacing="-1.5">infonet</text>
+
+  <!-- COMPUTERS in Bold Red Uppercase -->
+  <text x="70" y="104" font-family="'Montserrat', 'Poppins', sans-serif" font-size="26" font-weight="900" fill="#e11d2a" letter-spacing="4.5">COMPUTERS</text>
+</svg>
