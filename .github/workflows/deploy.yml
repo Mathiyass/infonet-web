@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -24,6 +24,12 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Reconstruct Banner Images
+        run: |
+          if [ -d "images_b64" ]; then
+            node scripts/reconstruct_images.js
+          fi
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
