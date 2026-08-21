@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Infonet / SellX Sri Lanka</title>
+    <meta name="description" content="Learn about Infonet Computers / SellX Sri Lanka - our heritage, official hardware partnerships, high-performance custom PC builds, and country-wide service network.">
+    <meta name="theme-color" content="#c52222">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <!-- 2. Middle Header Bar -->
+    <header class="middle-bar">
+        <div class="container middle-bar-inner">
+            <a href="index.html" class="logo" aria-label="Infonet Computers Home">
+                <img src="logo.svg" alt="Infonet Computers" style="height: 52px; width: auto;">
+            </a>
+            
+            <div class="search-wrapper-rel">
+                <form class="search-box" id="searchForm" role="search" onsubmit="return false;">
+                    <select id="searchCategory" aria-label="Category Selection">
+                        <option value="all">All Categories</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="gaming-laptops">Gaming Laptops</option>
+                        <option value="desktop">Custom Desktops</option>
+                        <option value="components">Components &amp; GPUs</option>
+                        <option value="monitors">4K &amp; OLED Monitors</option>
+                        <option value="accessories">Peripherals &amp; Audio</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="Search laptops, RTX GPUs, custom PCs..." aria-label="Search">
+                    <button type="submit" id="searchBtn" aria-label="Search Button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <div class="header-actions">
+                <div class="header-call-pill hide-mobile">
+                    <i class="fa-solid fa-phone-volume" style="color: var(--primary-green);"></i>
+                    <div class="header-call-text">
+                        <span>Direct Hotline:</span>
+                        <strong>0776 739 339</strong>
+                    </div>
+                </div>
+
+                <a href="shop.html" class="action-icon-link hide-mobile" title="Favorites">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Favorites</span>
+                    <span class="action-badge" id="wishlistBadge">0</span>
+                </a>
+
+                <a href="shop.html" class="action-icon-link hide-mobile" title="Compare">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Compare</span>
+                </a>
+
+                <a href="cart.html" class="action-icon-link" id="cartBtn" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <span class="action-badge" id="cartBadge">0</span>
+                </a>
+
+                <button class="mobile-menu-btn" id="mobileNavToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Navigation Bar -->
+    <nav class="bottom-bar" id="mainNavBar">
+        <div class="container bottom-bar-inner">
+            <div class="category-dropdown-wrapper">
+                <button class="category-toggle-btn" id="categoryDropdownToggle" aria-label="Browse Categories">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                    <span>Browse Categories</span>
+                    <i class="fa-solid fa-chevron-down toggle-chevron"></i>
+                </button>
+                <div class="category-dropdown-menu" id="headerCategoryDropdown">
+                    <ul class="cat-menu-list">
+                        <li><a href="shop.html?cat=laptops"><span class="cat-link-content"><i class="fa-solid fa-laptop cat-icon"></i> <span>Laptops &amp; MacBooks</span></span></a></li>
+                        <li><a href="shop.html?cat=gaming-laptops"><span class="cat-link-content"><i class="fa-solid fa-gamepad cat-icon"></i> <span>Gaming Laptops</span></span></a></li>
+                        <li><a href="shop.html?cat=desktop"><span class="cat-link-content"><i class="fa-solid fa-desktop cat-icon"></i> <span>Custom Gaming Desktops</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-microchip cat-icon"></i> <span>Graphics Cards &amp; GPUs</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-server cat-icon"></i> <span>Processors &amp; CPUs</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-memory cat-icon"></i> <span>Motherboards &amp; Memory</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-hard-drive cat-icon"></i> <span>SSD &amp; Storage Drives</span></span></a></li>
+                        <li><a href="shop.html?cat=monitors"><span class="cat-link-content"><i class="fa-solid fa-tv cat-icon"></i> <span>Monitors &amp; Displays</span></span></a></li>
+                        <li><a href="shop.html?cat=accessories"><span class="cat-link-content"><i class="fa-solid fa-headphones cat-icon"></i> <span>Audio &amp; Peripherals</span></span></a></li>
+                        <li><a href="shop.html?cat=accessories"><span class="cat-link-content"><i class="fa-solid fa-fan cat-icon"></i> <span>Cases &amp; Power Supplies</span></span></a></li>
+                        <li class="view-all-cat-item"><a href="shop.html"><span>View All Categories</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="main-nav" id="mainNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop Catalog</a></li>
+                <li><a href="deals.html"><i class="fa-solid fa-fire" style="color: var(--primary-red);"></i> Weekly Deals</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="branches.html"><i class="fa-solid fa-location-dot"></i> Our Branches</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><span class="current-page">About Us</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="container">
+        <!-- Hero Header -->
+        <div class="about-hero">
+            <h1>Welcome to Infonet Computers</h1>
+            <p>Sri Lanka's premier destination for genuine laptops, custom gaming rigs, workstations, and high-performance IT peripherals.</p>
+        </div>
+
+        <!-- Metrics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-num">14+</div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">65,000+</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Genuine Products</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">2</div>
+                <div class="stat-label">Main Showrooms</div>
+            </div>
+        </div>
+
+        <!-- Story Section -->
+        <div class="about-grid-story">
+            <div class="about-story-text">
+                <h2>Our Mission &amp; Heritage</h2>
+                <p>
+                    Established with a passion for cutting-edge technology and customer trust under the leadership of Managing Director <strong>Indika Senadheera</strong>, Infonet Computers has evolved into one of the most trusted names in Sri Lanka's computing landscape. Our mission is to provide tech enthusiasts, content creators, gamers, and corporate enterprises with direct access to genuine, top-tier computer hardware with unmatched warranty backing.
+                </p>
+                <p>
+                    We operate full-service showrooms in <strong>Embilipitiya</strong> (New Town Road) and <strong>Padalangala</strong> (Nonagama Road, 42 Junction), serving customers across the island with authorized hardware from <strong>Apple, ASUS ROG, NVIDIA, Intel, AMD, Corsair, Dell, and Lenovo</strong>. Every device in our inventory is 100% genuine, backed by manufacturer-certified warranties and local technical repair support.
+                </p>
+            </div>
+            <div class="about-story-img">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=85" alt="Our High-Performance Tech Showroom">
+            </div>
+        </div>
+
+        <!-- Core Values Section -->
+        <div class="core-values-grid">
+            <div class="value-card">
+                <div class="value-icon"><i class="fa-solid fa-certificate"></i></div>
+                <h3>100% Authenticity</h3>
+                <p>Zero compromises on quality. All laptops and components are brand new factory sealed with authentic serial tracking.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3>Master PC Builders</h3>
+                <p>From complex custom hardline liquid cooling to high-density AI workstations, our certified engineers build to perfection.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3>Express Islandwide Delivery</h3>
+                <p>Safe insured delivery across all 25 districts of Sri Lanka, with real-time tracking and careful bubble-shield packaging.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Bar -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Column 1 -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 16px;">
+                        <img src="logo.svg" alt="Infonet Computers" style="height: 48px; width: auto; background: white; padding: 5px 12px; border-radius: 8px;">
+                    </div>
+                    <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 20px;">
+                        Infonet Computers is Sri Lanka's trusted tech destination for premium laptops, custom gaming rigs, workstations, and genuine components.
+                    </p>
+                    <div class="footer-hotline-block">
+                        <span>MANAGING DIRECTOR DIRECT LINE</span>
+                        <strong style="color: var(--primary-green);">0776 739 339 (Indika Senadheera)</strong>
+                    </div>
+                    <div class="footer-hotline-block">
+                        <span>EMBILIPITIYA MAIN SHOWROOM</span>
+                        <p style="color: #cbd5e1; font-size: 0.86rem;">New Town Road, Embilipitiya | 071 7 839 339 / 076 7 739 339</p>
+                    </div>
+                    <div class="footer-hotline-block">
+                        <span>PADALANGALA BRANCH</span>
+                        <p style="color: #cbd5e1; font-size: 0.86rem;">Nonagama Road, 42 Junction, Padalangala | 070 6 739 339 / 076 6 139 339</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="branches.html">Our Branches</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="deals.html">Weekly Deals</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-col">
+                    <h4>My Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="shop.html">Track My Order</a></li>
+                        <li><a href="shop.html">Wishlist</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="deals.html">Payment &amp; Installments</a></li>
+                        <li><a href="contact.html">Warranty Policy</a></li>
+                        <li><a href="contact.html">Returns &amp; Refunds</a></li>
+                        <li><a href="contact.html">Islandwide Delivery</a></li>
+                        <li><a href="contact.html">Support &amp; FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <div>
+                        &copy; 2026 Infonet Computers. All Rights Reserved. Designed for Maximum Performance.
+                    </div>
+                    <div class="payment-icons">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
