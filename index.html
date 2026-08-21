@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infonet Computers | Sri Lanka's Premier Laptop, Gaming PC &amp; Tech Hub</title>
+    <meta name="description" content="Infonet Computers - Sri Lanka's premier destination for Apple MacBooks, ASUS ROG Gaming Laptops, RTX GPUs, Custom Liquid-Cooled PCs, and Genuine Hardware in Embilipitiya & Padalangala.">
+    <meta name="theme-color" content="#009640">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=2">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- 2. Middle Header Bar -->
+    <header class="middle-bar">
+        <div class="container middle-bar-inner">
+            <!-- Infonet Brand Logo -->
+            <a href="index.html" class="logo" aria-label="Infonet Computers Home">
+                <img src="logo.svg" alt="Infonet Computers" style="height: 52px; width: auto;">
+            </a>
+            
+            <!-- Search Box with Category Selector & Auto-Suggest -->
+            <div class="search-wrapper-rel">
+                <form class="search-box" id="searchForm" role="search" onsubmit="return false;">
+                    <select id="searchCategory" aria-label="Category Selection">
+                        <option value="all">All Categories</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="gaming-laptops">Gaming Laptops</option>
+                        <option value="desktop">Custom Desktops</option>
+                        <option value="components">Components &amp; GPUs</option>
+                        <option value="monitors">4K &amp; OLED Monitors</option>
+                        <option value="accessories">Peripherals &amp; Audio</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="Search laptops, RTX GPUs, custom PCs..." aria-label="Search">
+                    <button type="submit" id="searchBtn" aria-label="Search Button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Direct Hotline Capsule -->
+                <div class="header-call-pill hide-mobile">
+                    <i class="fa-solid fa-phone-volume" style="color: var(--primary-green);"></i>
+                    <div class="header-call-text">
+                        <span>Direct Hotline:</span>
+                        <strong>0776 739 339</strong>
+                    </div>
+                </div>
+
+                <!-- Favorites / Wishlist -->
+                <a href="shop.html" class="action-icon-link hide-mobile" title="Favorites">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Favorites</span>
+                    <span class="action-badge" id="wishlistBadge">0</span>
+                </a>
+
+                <!-- Compare -->
+                <a href="shop.html" class="action-icon-link hide-mobile" title="Compare">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Compare</span>
+                </a>
+
+                <!-- Shopping Cart -->
+                <a href="cart.html" class="action-icon-link" id="cartBtn" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <span class="action-badge" id="cartBadge">0</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileNavToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Navigation Bar (Infonet Green & Pitch Black) -->
+    <nav class="bottom-bar" id="mainNavBar">
+        <div class="container bottom-bar-inner">
+            <!-- Infonet Green Browse Categories Button & Dropdown -->
+            <div class="category-dropdown-wrapper">
+                <button class="category-toggle-btn" id="categoryDropdownToggle" aria-label="Browse Categories">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                    <span>Browse Categories</span>
+                    <i class="fa-solid fa-chevron-down toggle-chevron"></i>
+                </button>
+                <div class="category-dropdown-menu" id="headerCategoryDropdown">
+                    <ul class="cat-menu-list">
+                        <li><a href="shop.html?cat=laptops"><span class="cat-link-content"><i class="ph-light ph-laptop cat-icon"></i> <span>Laptops &amp; MacBooks</span></span></a></li>
+                        <li><a href="shop.html?cat=gaming-laptops"><span class="cat-link-content"><i class="ph-light ph-game-controller cat-icon"></i> <span>Gaming Laptops</span></span></a></li>
+                        <li><a href="shop.html?cat=desktop"><span class="cat-link-content"><i class="ph-light ph-desktop cat-icon"></i> <span>Custom Gaming Desktops</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="ph-light ph-cpu cat-icon"></i> <span>Graphics Cards &amp; GPUs</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="ph-light ph-cpu cat-icon"></i> <span>Processors &amp; CPUs</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="ph-light ph-memory cat-icon"></i> <span>Motherboards &amp; Memory</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="ph-light ph-hard-drive cat-icon"></i> <span>SSD &amp; Storage Drives</span></span></a></li>
+                        <li><a href="shop.html?cat=monitors"><span class="cat-link-content"><i class="ph-light ph-monitor cat-icon"></i> <span>Monitors &amp; Displays</span></span></a></li>
+                        <li><a href="shop.html?cat=accessories"><span class="cat-link-content"><i class="ph-light ph-headphones cat-icon"></i> <span>Audio &amp; Peripherals</span></span></a></li>
+                        <li><a href="shop.html?cat=accessories"><span class="cat-link-content"><i class="ph-light ph-fan cat-icon"></i> <span>Cases &amp; Power Supplies</span></span></a></li>
+                        <li class="view-all-cat-item"><a href="shop.html"><span>View All Categories</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="main-nav" id="mainNav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop Catalog</a></li>
+                <li><a href="deals.html"><i class="fa-solid fa-fire" style="color: var(--primary-red);"></i> Weekly Deals</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="branches.html"><i class="fa-solid fa-location-dot"></i> Our Branches</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 4. Hero Section (540px High-Definition 3-Banner Grid) -->
+    <section class="sellx-hero-section">
+        <div class="container">
+            <div class="sellx-hero-grid">
+                <!-- 1. Large Left Banner Slider -->
+                <div class="hero-main-banner">
+                    <a href="shop.html?cat=laptops" class="slider-image-link">
+                        <img src="images/banners/lenovo.jpg" alt="Lenovo Yoga Explore the flip side" class="slider-img img-1">
+                        <img src="images/banners/main_2.jpg" alt="Ultimate Gaming Power" class="slider-img img-2">
+                        <img src="images/banners/main_3.jpg" alt="Powering Professionals" class="slider-img img-3">
+                    </a>
+                    <div class="hero-slider-pagination">
+                        <span class="hero-slider-dot active"></span>
+                        <span class="hero-slider-dot"></span>
+                        <span class="hero-slider-dot"></span>
+                    </div>
+                </div>
+
+                <!-- 2. Middle Tall Banner -->
+                <div class="hero-side-banner-tall">
+                    <a href="shop.html?cat=accessories">
+                        <img src="images/banners/jbl.jpg" alt="JBL Partybox Ultimate">
+                    </a>
+                </div>
+
+                <!-- 3. Right Stacked Banners -->
+                <div class="hero-side-banners-stacked">
+                    <div class="hero-stacked-banner">
+                        <a href="shop.html?cat=smartphones">
+                            <img src="images/banners/iphone.jpg" alt="Apple iPhone 16">
+                        </a>
+                    </div>
+                    <div class="hero-stacked-banner">
+                        <a href="shop.html?cat=monitors">
+                            <img src="images/banners/asus.jpg" alt="Asus TUF Gaming 280Hz Monitor">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 3-Box Service Trust Row -->
+    <section class="trust-bar-section">
+        <div class="container">
+            <div class="trust-bar-card">
+                <div class="trust-item">
+                    <i class="ph-light ph-truck"></i>
+                    <div class="trust-item-text">
+                        <strong>Free Islandwide Delivery</strong>
+                        <p>Safe insured delivery over Rs. 100,000</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="ph-light ph-shield-check"></i>
+                    <div class="trust-item-text">
+                        <strong>100% Genuine Hardware</strong>
+                        <p>Official authorized agents in Sri Lanka</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="ph-light ph-seal-check"></i>
+                    <div class="trust-item-text">
+                        <strong>Official Warranty Backing</strong>
+                        <p>Comprehensive manufacturer warranty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Circle Category Showcase (Infonet Emerald Glow) -->
+    <section class="circle-categories-section">
+        <div class="container">
+            <div class="circle-categories-grid">
+                <!-- 1. Laptops -->
+                <a href="shop.html?cat=laptops" class="circle-cat-card">
+                    <div class="circle-cat-bubble">
+                        <i class="ph-light ph-laptop"></i>
+                    </div>
+                    <span class="circle-cat-name">Laptops &amp; Ultrabooks</span>
+                </a>
+
+                <!-- 2. Gaming Laptops -->
+                <a href="shop.html?cat=gaming-laptops" class="circle-cat-card">
+                    <div class="circle-cat-bubble">
+                        <i class="ph-light ph-game-controller"></i>
+                    </div>
+                    <span class="circle-cat-name">Gaming Laptops</span>
+                </a>
+
+                <!-- 3. Desktop -->
+                <a href="shop.html?cat=desktop" class="circle-cat-card">
+                    <div class="circle-cat-bubble">
+                        <i class="ph-light ph-desktop"></i>
+                    </div>
+                    <span class="circle-cat-name">Custom Desktops</span>
+                </a>
+
+                <!-- 4. Components & GPUs -->
+                <a href="shop.html?cat=components" class="circle-cat-card">
+                    <div class="circle-cat-bubble">
+                        <i class="ph-light ph-cpu"></i>
+                    </div>
+                    <span class="circle-cat-name">Components &amp; GPUs</span>
+                </a>
+
+                <!-- 5. 4K OLED Monitors -->
+                <a href="shop.html?cat=monitors" class="circle-cat-card">
+                    <div class="circle-cat-bubble">
+                        <i class="ph-light ph-monitor"></i>
+                    </div>
+                    <span class="circle-cat-name">4K &amp; Gaming Displays</span>
+                </a>
+
+                <!-- 6. Peripherals & Audio -->
+                <a href="shop.html?cat=accessories" class="circle-cat-card">
+                    <div class="circle-cat-bubble">
+                        <i class="ph-light ph-headphones"></i>
+                    </div>
+                    <span class="circle-cat-name">Peripherals &amp; Audio</span>
+                </a>
+            </div>
+
+            <div class="category-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. New Arrivals Product Grid (High-Res Studio Photography) -->
+    <section class="container" style="margin-bottom: 40px;">
+        <div class="section-title-row">
+            <h2>New Arrivals</h2>
+            <a href="shop.html" class="section-more-link" style="color: var(--primary-green);">More Products <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="swiper product-grid-swiper">
+<div class="swiper-wrapper">
+            <!-- Product 1: MacBook Pro 16 M3 Max -->
+            <div class="product-card swiper-slide" data-category="laptops">
+                
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-102')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[1])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=85" alt="Apple MacBook Pro 16">
+                </div>
+                <h4 class="product-title"><a href="product.html">Apple MacBook Pro 16" M3 Max 36GB Unified Memory 1TB SSD Space Black</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 950,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 2: ASUS ROG Strix SCAR 18 -->
+            <div class="product-card swiper-slide" data-category="gaming-laptops">
+                <div class="product-badge sale">Hot</div>
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-101')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[0])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&auto=format&fit=crop&q=85" alt="ASUS ROG Strix SCAR 18">
+                </div>
+                <h4 class="product-title"><a href="product.html">ASUS ROG Strix SCAR 18 i9-14900HX 32GB RAM 1TB SSD RTX 4080 240Hz Nebula</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 895,000.00</span>
+                    <span class="old-price">Rs. 940,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 3: Dell XPS 15 -->
+            <div class="product-card swiper-slide" data-category="laptops">
+                <div class="product-badge sale">Sale</div>
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-103')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[2])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=85" alt="Dell XPS 15 9530">
+                </div>
+                <h4 class="product-title"><a href="product.html">Dell XPS 15 9530 Intel Core i7-13700H 32GB RAM 1TB SSD RTX 4060 OLED Touch</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 450,000.00</span>
+                    <span class="old-price">Rs. 480,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 4: Lenovo ThinkPad X1 Carbon -->
+            <div class="product-card swiper-slide" data-category="laptops">
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-104')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[3])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=85" alt="Lenovo ThinkPad X1 Carbon">
+                </div>
+                <h4 class="product-title"><a href="product.html">Lenovo ThinkPad X1 Carbon Gen 11 Intel Core i7 16GB RAM 512GB SSD Ultrabook</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 280,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+                    <!-- Product 1: MacBook Pro 16 M3 Max -->
+            <div class="product-card swiper-slide" data-category="laptops">
+                
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-102')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[1])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=85" alt="Apple MacBook Pro 16">
+                </div>
+                <h4 class="product-title"><a href="product.html">Apple MacBook Pro 16" M3 Max 36GB Unified Memory 1TB SSD Space Black</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 950,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 2: ASUS ROG Strix SCAR 18 -->
+            <div class="product-card swiper-slide" data-category="gaming-laptops">
+                <div class="product-badge sale">Hot</div>
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-101')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[0])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&auto=format&fit=crop&q=85" alt="ASUS ROG Strix SCAR 18">
+                </div>
+                <h4 class="product-title"><a href="product.html">ASUS ROG Strix SCAR 18 i9-14900HX 32GB RAM 1TB SSD RTX 4080 240Hz Nebula</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 895,000.00</span>
+                    <span class="old-price">Rs. 940,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 3: Dell XPS 15 -->
+            <div class="product-card swiper-slide" data-category="laptops">
+                <div class="product-badge sale">Sale</div>
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-103')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[2])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=85" alt="Dell XPS 15 9530">
+                </div>
+                <h4 class="product-title"><a href="product.html">Dell XPS 15 9530 Intel Core i7-13700H 32GB RAM 1TB SSD RTX 4060 OLED Touch</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 450,000.00</span>
+                    <span class="old-price">Rs. 480,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 4: Lenovo ThinkPad X1 Carbon -->
+            <div class="product-card swiper-slide" data-category="laptops">
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-104')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[3])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=85" alt="Lenovo ThinkPad X1 Carbon">
+                </div>
+                <h4 class="product-title"><a href="product.html">Lenovo ThinkPad X1 Carbon Gen 11 Intel Core i7 16GB RAM 512GB SSD Ultrabook</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 280,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+    <div class="swiper-pagination" style="position: relative; margin-top: 30px;"></div>
+</div>
+    </section>
+
+    <!-- 8. Promotional Banners -->
+    <section class="container">
+        <div class="promo-banners-row">
+            <div class="promo-banner-card">
+                <a href="shop.html?cat=gaming-laptops">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1000&auto=format&fit=crop&q=85" alt="Pro Esports Gaming Arena Setup">
+                </a>
+            </div>
+            <div class="promo-banner-card">
+                <a href="shop.html?cat=desktop">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=1000&auto=format&fit=crop&q=85" alt="Minimalist High-Performance Workstation">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 10. Popular Products Grid -->
+    <section class="container" style="margin-bottom: 40px;">
+        <div class="section-title-row">
+            <h2>Popular Hardware &amp; Peripherals</h2>
+            <a href="shop.html" class="section-more-link" style="color: var(--primary-green);">More Products <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="swiper product-grid-swiper">
+<div class="swiper-wrapper">
+            <!-- Product 5: NVIDIA GeForce RTX 4090 -->
+            <div class="product-card swiper-slide" data-category="components">
+                <div class="product-badge sale">Hot</div>
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-105')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[4])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&auto=format&fit=crop&q=85" alt="NVIDIA GeForce RTX 4090">
+                </div>
+                <h4 class="product-title"><a href="product.html">NVIDIA GeForce RTX 4090 24GB GDDR6X ROG Strix OC Edition Graphics Card</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 685,000.00</span>
+                    <span class="old-price">Rs. 720,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 6: Custom Water-Cooled PC -->
+            <div class="product-card swiper-slide" data-category="desktop">
+                
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-106')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[5])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-15872023775-e229f172b9d7?w=800&auto=format&fit=crop&q=85" alt="Custom Water-Cooled PC">
+                </div>
+                <h4 class="product-title"><a href="product.html">Custom Water-Cooled Intel Core i9-14900KS RTX 4090 64GB DDR5 Gaming Rig</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 1,250,000.00</span>
+                    <span class="old-price">Rs. 1,320,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 7: ASUS ROG 4K QD-OLED Monitor -->
+            <div class="product-card swiper-slide" data-category="monitors">
+                
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-107')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[6])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=85" alt="ASUS ROG Swift 4K OLED">
+                </div>
+                <h4 class="product-title"><a href="product.html">ASUS ROG Swift PG32UCDM 32" 4K QD-OLED 240Hz 0.03ms HDR Gaming Monitor</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 365,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 8: Corsair Virtuoso Headset -->
+            <div class="product-card swiper-slide" data-category="accessories">
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-108')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[7])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=85" alt="Corsair Virtuoso Wireless">
+                </div>
+                <h4 class="product-title"><a href="product.html">Corsair Virtuoso RGB Wireless XT High-Fidelity Spatial Audio Gaming Headset</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 48,500.00</span>
+                    <span class="old-price">Rs. 54,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+                    <!-- Product 5: NVIDIA GeForce RTX 4090 -->
+            <div class="product-card swiper-slide" data-category="components">
+                <div class="product-badge sale">Hot</div>
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-105')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[4])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&auto=format&fit=crop&q=85" alt="NVIDIA GeForce RTX 4090">
+                </div>
+                <h4 class="product-title"><a href="product.html">NVIDIA GeForce RTX 4090 24GB GDDR6X ROG Strix OC Edition Graphics Card</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 685,000.00</span>
+                    <span class="old-price">Rs. 720,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 6: Custom Water-Cooled PC -->
+            <div class="product-card swiper-slide" data-category="desktop">
+                
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-106')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[5])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-15872023775-e229f172b9d7?w=800&auto=format&fit=crop&q=85" alt="Custom Water-Cooled PC">
+                </div>
+                <h4 class="product-title"><a href="product.html">Custom Water-Cooled Intel Core i9-14900KS RTX 4090 64GB DDR5 Gaming Rig</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 1,250,000.00</span>
+                    <span class="old-price">Rs. 1,320,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 7: ASUS ROG 4K QD-OLED Monitor -->
+            <div class="product-card swiper-slide" data-category="monitors">
+                
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-107')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[6])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=85" alt="ASUS ROG Swift 4K OLED">
+                </div>
+                <h4 class="product-title"><a href="product.html">ASUS ROG Swift PG32UCDM 32" 4K QD-OLED 240Hz 0.03ms HDR Gaming Monitor</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 365,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Product 8: Corsair Virtuoso Headset -->
+            <div class="product-card swiper-slide" data-category="accessories">
+                
+                <div class="product-img-wrapper">
+                <div class="product-card-actions">
+                    <button class="btn-card-action" onclick="openQuickView('p-108')" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-card-action" onclick="toggleWishlist(REAL_PRODUCTS_DB[7])" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=85" alt="Corsair Virtuoso Wireless">
+                </div>
+                <h4 class="product-title"><a href="product.html">Corsair Virtuoso RGB Wireless XT High-Fidelity Spatial Audio Gaming Headset</a></h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">Rs. 48,500.00</span>
+                    <span class="old-price">Rs. 54,000.00</span>
+                </div>
+                <button class="btn-add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+    <div class="swiper-pagination" style="position: relative; margin-top: 30px;"></div>
+</div>
+    </section>
+
+    <!-- 11. Official Brand Partners Section -->
+    <section class="container">
+        <div class="brands-section">
+            <div class="brands-grid-logos">
+                <img src="https://sellx.lk/images/brands/134_main_1773309517.png" alt="AMD" class="brand-logo-item" loading="lazy">
+                <img src="https://sellx.lk/images/brands/5_main_1758705634.png" alt="Asus" class="brand-logo-item" loading="lazy">
+                <img src="https://sellx.lk/images/brands/7_main_1765179441.png" alt="Corsair" class="brand-logo-item" loading="lazy">
+                <img src="https://sellx.lk/images/brands/8_main_1765180868.png" alt="Dell" class="brand-logo-item" loading="lazy">
+                <img src="https://sellx.lk/images/brands/9_main_1765183857.png" alt="HP" class="brand-logo-item" loading="lazy">
+                <img src="https://sellx.lk/images/brands/11_main_1768302244.png" alt="Lenovo" class="brand-logo-item" loading="lazy">
+                <img src="https://sellx.lk/images/brands/12_main_1771316358.png" alt="MSI" class="brand-logo-item" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <!-- 13. Main Footer (Infonet Computers) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Column 1 -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 16px;">
+                        <img src="logo.svg" alt="Infonet Computers" style="height: 48px; width: auto; background: white; padding: 5px 12px; border-radius: 8px;">
+                    </div>
+                    <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 20px;">
+                        Infonet Computers is Sri Lanka's trusted tech destination for premium laptops, custom gaming rigs, workstations, and genuine components.
+                    </p>
+                    <div class="footer-hotline-block">
+                        <span>MANAGING DIRECTOR DIRECT LINE</span>
+                        <strong style="color: var(--primary-green);">0776 739 339 (Indika Senadheera)</strong>
+                    </div>
+                    <div class="footer-hotline-block">
+                        <span>EMBILIPITIYA MAIN SHOWROOM</span>
+                        <p style="color: #cbd5e1; font-size: 0.86rem;">New Town Road, Embilipitiya | 071 7 839 339 / 076 7 739 339</p>
+                    </div>
+                    <div class="footer-hotline-block">
+                        <span>PADALANGALA BRANCH</span>
+                        <p style="color: #cbd5e1; font-size: 0.86rem;">Nonagama Road, 42 Junction, Padalangala | 070 6 739 339 / 076 6 139 339</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="branches.html">Our Branches</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="deals.html">Weekly Deals</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-col">
+                    <h4>My Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="shop.html">Track My Order</a></li>
+                        <li><a href="shop.html">Wishlist</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="deals.html">Payment &amp; Installments</a></li>
+                        <li><a href="contact.html">Warranty Policy</a></li>
+                        <li><a href="contact.html">Returns &amp; Refunds</a></li>
+                        <li><a href="contact.html">Islandwide Delivery</a></li>
+                        <li><a href="contact.html">Support &amp; FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <div>
+                        &copy; 2026 Infonet Computers. All Rights Reserved. Designed for Maximum Performance.
+                    </div>
+                    <div class="payment-icons">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
