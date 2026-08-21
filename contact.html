@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us &amp; Technical Support | Infonet Computers Sri Lanka</title>
+    <meta name="description" content="Get in touch with Infonet Computers Sri Lanka. Managing director hotline 0776 739 339, branches in Embilipitiya & Padalangala, WhatsApp support and technical repair center.">
+    <meta name="theme-color" content="#009640">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <!-- 2. Middle Header Bar -->
+    <header class="middle-bar">
+        <div class="container middle-bar-inner">
+            <a href="index.html" class="logo" aria-label="Infonet Computers Home">
+                <img src="logo.svg" alt="Infonet Computers" style="height: 52px; width: auto;">
+            </a>
+            
+            <div class="search-wrapper-rel">
+                <form class="search-box" id="searchForm" role="search" onsubmit="return false;">
+                    <select id="searchCategory" aria-label="Category Selection">
+                        <option value="all">All Categories</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="gaming-laptops">Gaming Laptops</option>
+                        <option value="desktop">Custom Desktops</option>
+                        <option value="components">Components &amp; GPUs</option>
+                        <option value="monitors">4K &amp; OLED Monitors</option>
+                        <option value="accessories">Peripherals &amp; Audio</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="Search laptops, RTX GPUs, custom PCs..." aria-label="Search">
+                    <button type="submit" id="searchBtn" aria-label="Search Button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <div class="header-actions">
+                <div class="header-call-pill hide-mobile">
+                    <i class="fa-solid fa-phone-volume" style="color: var(--primary-green);"></i>
+                    <div class="header-call-text">
+                        <span>Direct Hotline:</span>
+                        <strong>0776 739 339</strong>
+                    </div>
+                </div>
+
+                <a href="shop.html" class="action-icon-link hide-mobile" title="Favorites">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Favorites</span>
+                    <span class="action-badge" id="wishlistBadge">0</span>
+                </a>
+
+                <a href="shop.html" class="action-icon-link hide-mobile" title="Compare">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Compare</span>
+                </a>
+
+                <a href="cart.html" class="action-icon-link" id="cartBtn" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <span class="action-badge" id="cartBadge">0</span>
+                </a>
+
+                <button class="mobile-menu-btn" id="mobileNavToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Navigation Bar -->
+    <nav class="bottom-bar" id="mainNavBar">
+        <div class="container bottom-bar-inner">
+            <div class="category-dropdown-wrapper">
+                <button class="category-toggle-btn" id="categoryDropdownToggle" aria-label="Browse Categories">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                    <span>Browse Categories</span>
+                    <i class="fa-solid fa-chevron-down toggle-chevron"></i>
+                </button>
+                <div class="category-dropdown-menu" id="headerCategoryDropdown">
+                    <ul class="cat-menu-list">
+                        <li><a href="shop.html?cat=laptops"><span class="cat-link-content"><i class="fa-solid fa-laptop cat-icon"></i> <span>Laptops &amp; MacBooks</span></span></a></li>
+                        <li><a href="shop.html?cat=gaming-laptops"><span class="cat-link-content"><i class="fa-solid fa-gamepad cat-icon"></i> <span>Gaming Laptops</span></span></a></li>
+                        <li><a href="shop.html?cat=desktop"><span class="cat-link-content"><i class="fa-solid fa-desktop cat-icon"></i> <span>Custom Gaming Desktops</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-microchip cat-icon"></i> <span>Graphics Cards &amp; GPUs</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-server cat-icon"></i> <span>Processors &amp; CPUs</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-memory cat-icon"></i> <span>Motherboards &amp; Memory</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-hard-drive cat-icon"></i> <span>SSD &amp; Storage Drives</span></span></a></li>
+                        <li><a href="shop.html?cat=monitors"><span class="cat-link-content"><i class="fa-solid fa-tv cat-icon"></i> <span>Monitors &amp; Displays</span></span></a></li>
+                        <li><a href="shop.html?cat=accessories"><span class="cat-link-content"><i class="fa-solid fa-headphones cat-icon"></i> <span>Audio &amp; Peripherals</span></span></a></li>
+                        <li><a href="shop.html?cat=accessories"><span class="cat-link-content"><i class="fa-solid fa-fan cat-icon"></i> <span>Cases &amp; Power Supplies</span></span></a></li>
+                        <li class="view-all-cat-item"><a href="shop.html"><span>View All Categories</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="main-nav" id="mainNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop Catalog</a></li>
+                <li><a href="deals.html"><i class="fa-solid fa-fire" style="color: var(--primary-red);"></i> Weekly Deals</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="branches.html"><i class="fa-solid fa-location-dot"></i> Our Branches</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><span class="current-page">Contact Us</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact & FAQ Layout -->
+    <div class="container">
+        <div class="contact-layout">
+            <!-- Left: Contact Form -->
+            <div class="checkout-card" style="border-top: 4px solid var(--primary-green);">
+                <h3><i class="fa-regular fa-envelope" style="color: var(--primary-green);"></i> Send Infonet A Message</h3>
+                <form id="contactForm" onsubmit="event.preventDefault(); showToast('Message Sent! Our team will contact you.'); this.reset();">
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" required placeholder="Kasun Perera">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" required placeholder="kasun.perera@gmail.com">
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>Phone Number (Mobile) *</label>
+                            <input type="tel" required placeholder="077 123 4567">
+                        </div>
+                        <div class="form-group">
+                            <label>Inquiry Subject *</label>
+                            <select style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px;">
+                                <option>Product Availability &amp; Pricing</option>
+                                <option>Custom PC Build Consultation</option>
+                                <option>Warranty &amp; Technical Support</option>
+                                <option>Embilipitiya / Padalangala Store Pickup</option>
+                                <option>Corporate / Bulk Quotation</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Message *</label>
+                        <textarea rows="5" required placeholder="How can our technical team assist you today?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-checkout-proceed" style="width: 100%; background: var(--primary-green);">
+                        <i class="fa-solid fa-paper-plane"></i> Send Inquiry Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Direct Contact Info & FAQs -->
+            <div>
+                <div class="checkout-card" style="margin-bottom: 24px; border-top: 4px solid var(--primary-green);">
+                    <h3><i class="fa-solid fa-headset" style="color: var(--primary-green);"></i> Direct Contact &amp; Support</h3>
+                    
+                    <div class="branch-detail-row" style="margin-bottom: 14px;">
+                        <i class="fa-solid fa-user-tie" style="color: var(--primary-green); font-size: 1.1rem; width: 24px;"></i>
+                        <div>
+                            <strong>Managing Director Direct Line</strong>
+                            <p style="margin: 0; color: #0f172a; font-weight: 700;">0776 739 339 (Indika Senadheera)</p>
+                        </div>
+                    </div>
+
+                    <div class="branch-detail-row" style="margin-bottom: 14px;">
+                        <i class="fa-brands fa-whatsapp" style="color: #22c55e; font-size: 1.2rem; width: 24px;"></i>
+                        <div>
+                            <strong>WhatsApp &amp; IMO Support</strong>
+                            <p style="margin: 0; color: #475569;">0776 739 339 (Instant Chat)</p>
+                        </div>
+                    </div>
+
+                    <div class="branch-detail-row" style="margin-bottom: 14px;">
+                        <i class="fa-solid fa-phone" style="color: var(--primary-green); font-size: 1.1rem; width: 24px;"></i>
+                        <div>
+                            <strong>Embilipitiya Main Branch</strong>
+                            <p style="margin: 0; color: #475569;">New Town Road, Embilipitiya | 071 7 839 339 / 076 7 739 339</p>
+                        </div>
+                    </div>
+
+                    <div class="branch-detail-row" style="margin-bottom: 14px;">
+                        <i class="fa-solid fa-phone" style="color: var(--primary-green); font-size: 1.1rem; width: 24px;"></i>
+                        <div>
+                            <strong>Padalangala Branch</strong>
+                            <p style="margin: 0; color: #475569;">Nonagama Road, 42 Junction, Padalangala | 070 6 739 339 / 076 6 139 339</p>
+                        </div>
+                    </div>
+
+                    <div class="branch-detail-row" style="margin-bottom: 14px;">
+                        <i class="fa-solid fa-envelope" style="color: var(--primary-green); font-size: 1.1rem; width: 24px;"></i>
+                        <div>
+                            <strong>Official Email</strong>
+                            <p style="margin: 0; color: #475569;">infonetcomemb@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="branch-detail-row">
+                        <i class="fa-brands fa-facebook" style="color: #1877f2; font-size: 1.1rem; width: 24px;"></i>
+                        <div>
+                            <strong>Facebook Page</strong>
+                            <p style="margin: 0; color: #475569;">Infonet computers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Accordion -->
+                <div class="checkout-card">
+                    <h3><i class="fa-regular fa-circle-question" style="color: var(--primary-green);"></i> Frequently Asked Questions</h3>
+                    
+                    <div class="faq-item" style="border-bottom: 1px solid #e2e8f0; padding: 12px 0;">
+                        <strong style="font-size: 0.95rem; color: var(--text-dark); display: block; margin-bottom: 4px;">Are all laptops &amp; parts 100% genuine with warranty?</strong>
+                        <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Yes. Every item is 100% brand new, authentic, and covered under official manufacturer warranty schemes.</p>
+                    </div>
+
+                    <div class="faq-item" style="border-bottom: 1px solid #e2e8f0; padding: 12px 0;">
+                        <strong style="font-size: 0.95rem; color: var(--text-dark); display: block; margin-bottom: 4px;">Can I pick up my custom build at Embilipitiya or Padalangala?</strong>
+                        <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Absolutely! You can choose in-store collection at either branch or request free insured islandwide delivery.</p>
+                    </div>
+
+                    <div class="faq-item" style="padding: 12px 0 0 0;">
+                        <strong style="font-size: 0.95rem; color: var(--text-dark); display: block; margin-bottom: 4px;">Do you provide computer repairs and motherboard chip-level services?</strong>
+                        <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Yes, our dedicated hardware technician bench performs diagnostics, hardware upgrades, BIOS reprogramming, and custom liquid loop maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Bar -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Column 1 -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 16px;">
+                        <img src="logo.svg" alt="Infonet Computers" style="height: 48px; width: auto; background: white; padding: 5px 12px; border-radius: 8px;">
+                    </div>
+                    <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 20px;">
+                        Infonet Computers is Sri Lanka's trusted tech destination for premium laptops, custom gaming rigs, workstations, and genuine components.
+                    </p>
+                    <div class="footer-hotline-block">
+                        <span>MANAGING DIRECTOR DIRECT LINE</span>
+                        <strong style="color: var(--primary-green);">0776 739 339 (Indika Senadheera)</strong>
+                    </div>
+                    <div class="footer-hotline-block">
+                        <span>EMBILIPITIYA MAIN SHOWROOM</span>
+                        <p style="color: #cbd5e1; font-size: 0.86rem;">New Town Road, Embilipitiya | 071 7 839 339 / 076 7 739 339</p>
+                    </div>
+                    <div class="footer-hotline-block">
+                        <span>PADALANGALA BRANCH</span>
+                        <p style="color: #cbd5e1; font-size: 0.86rem;">Nonagama Road, 42 Junction, Padalangala | 070 6 739 339 / 076 6 139 339</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="branches.html">Our Branches</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="deals.html">Weekly Deals</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-col">
+                    <h4>My Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="shop.html">Track My Order</a></li>
+                        <li><a href="shop.html">Wishlist</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="deals.html">Payment &amp; Installments</a></li>
+                        <li><a href="contact.html">Warranty Policy</a></li>
+                        <li><a href="contact.html">Returns &amp; Refunds</a></li>
+                        <li><a href="contact.html">Islandwide Delivery</a></li>
+                        <li><a href="contact.html">Support &amp; FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <div>
+                        &copy; 2026 Infonet Computers. All Rights Reserved. Designed for Maximum Performance.
+                    </div>
+                    <div class="payment-icons">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
