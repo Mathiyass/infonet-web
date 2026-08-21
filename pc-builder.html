@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom PC Builder | Infonet / SellX Sri Lanka</title>
+    <meta name="description" content="Build your custom gaming PC, workstation, or editing rig with real-time compatibility checks, wattage calculator, and instant quotation at Infonet / SellX.">
+    <meta name="theme-color" content="#c52222">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <!-- 2. Middle Header Bar -->
+    <header class="middle-bar">
+        <div class="container middle-bar-inner">
+            <a href="index.html" class="logo" aria-label="Infonet Computers Home">
+                <img src="logo.svg" alt="Infonet Computers" style="height: 52px; width: auto;">
+            </a>
+            
+            <div class="search-wrapper-rel">
+                <form class="search-box" id="searchForm" role="search" onsubmit="return false;">
+                    <select id="searchCategory" aria-label="Category Selection">
+                        <option value="all">All Categories</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="gaming-laptops">Gaming Laptops</option>
+                        <option value="desktop">Custom Desktops</option>
+                        <option value="components">Components &amp; GPUs</option>
+                        <option value="monitors">4K &amp; OLED Monitors</option>
+                        <option value="accessories">Peripherals &amp; Audio</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="Search laptops, RTX GPUs, custom PCs..." aria-label="Search">
+                    <button type="submit" id="searchBtn" aria-label="Search Button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <div class="header-actions">
+                <div class="header-call-pill hide-mobile">
+                    <i class="fa-solid fa-phone-volume" style="color: var(--primary-green);"></i>
+                    <div class="header-call-text">
+                        <span>Direct Hotline:</span>
+                        <strong>0776 739 339</strong>
+                    </div>
+                </div>
+
+                <a href="shop.html" class="action-icon-link hide-mobile" title="Favorites">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Favorites</span>
+                    <span class="action-badge" id="wishlistBadge">0</span>
+                </a>
+
+                <a href="shop.html" class="action-icon-link hide-mobile" title="Compare">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Compare</span>
+                </a>
+
+                <a href="cart.html" class="action-icon-link" id="cartBtn" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <span class="action-badge" id="cartBadge">0</span>
+                </a>
+
+                <button class="mobile-menu-btn" id="mobileNavToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Navigation Bar -->
+    <nav class="bottom-bar" id="mainNavBar">
+        <div class="container bottom-bar-inner">
+            <div class="category-dropdown-wrapper">
+                <button class="category-toggle-btn" id="categoryDropdownToggle" aria-label="Browse Categories">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                    <span>Browse Categories</span>
+                    <i class="fa-solid fa-chevron-down toggle-chevron"></i>
+                </button>
+                <div class="category-dropdown-menu" id="headerCategoryDropdown">
+                    <ul class="cat-menu-list">
+                        <li><a href="shop.html?cat=laptops"><span class="cat-link-content"><i class="fa-solid fa-laptop cat-icon"></i> <span>Laptops &amp; MacBooks</span></span></a></li>
+                        <li><a href="shop.html?cat=gaming-laptops"><span class="cat-link-content"><i class="fa-solid fa-gamepad cat-icon"></i> <span>Gaming Laptops</span></span></a></li>
+                        <li><a href="shop.html?cat=desktop"><span class="cat-link-content"><i class="fa-solid fa-desktop cat-icon"></i> <span>Custom Gaming Desktops</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-microchip cat-icon"></i> <span>Graphics Cards &amp; GPUs</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-server cat-icon"></i> <span>Processors &amp; CPUs</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-memory cat-icon"></i> <span>Motherboards &amp; Memory</span></span></a></li>
+                        <li><a href="shop.html?cat=components"><span class="cat-link-content"><i class="fa-solid fa-hard-drive cat-icon"></i> <span>SSD &amp; Storage Drives</span></span></a></li>
+                        <li><a href="shop.html?cat=monitors"><span class="cat-link-content"><i class="fa-solid fa-tv cat-icon"></i> <span>Monitors &amp; Displays</span></span></a></li>
+                        <li><a href="shop.html?cat=accessories"><span class="cat-link-content"><i class="fa-solid fa-headphones cat-icon"></i> <span>Audio &amp; Peripherals</span></span></a></li>
+                        <li><a href="shop.html?cat=accessories"><span class="cat-link-content"><i class="fa-solid fa-fan cat-icon"></i> <span>Cases &amp; Power Supplies</span></span></a></li>
+                        <li class="view-all-cat-item"><a href="shop.html"><span>View All Categories</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="main-nav" id="mainNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop Catalog</a></li>
+                <li><a href="deals.html"><i class="fa-solid fa-fire" style="color: var(--primary-red);"></i> Weekly Deals</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="branches.html"><i class="fa-solid fa-location-dot"></i> Our Branches</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><span class="current-page">Custom PC Builder</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Builder Layout -->
+    <div class="container">
+        <div class="builder-container">
+            <!-- Left: Component Selection Steps -->
+            <div class="builder-steps-wrapper">
+                <!-- 1. Processor (CPU) -->
+                <div class="builder-step-row" id="step-cpu">
+                    <div class="step-info-col">
+                        <div class="step-icon-badge"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="step-title">
+                            <h4>Processor (CPU)</h4>
+                            <p>Intel Core 14th Gen or AMD Ryzen 7000/9000 Series</p>
+                            <div class="step-selected-item" id="selected-cpu">Not Selected</div>
+                        </div>
+                    </div>
+                    <button class="btn-choose-component" onclick="openComponentModal('cpu')">Choose CPU</button>
+                </div>
+
+                <!-- 2. Motherboard -->
+                <div class="builder-step-row" id="step-motherboard">
+                    <div class="step-info-col">
+                        <div class="step-icon-badge"><i class="fa-solid fa-chess-board"></i></div>
+                        <div class="step-title">
+                            <h4>Motherboard</h4>
+                            <p>Z790 / B760 / X670E / B650 Chipsets</p>
+                            <div class="step-selected-item" id="selected-motherboard">Not Selected</div>
+                        </div>
+                    </div>
+                    <button class="btn-choose-component" onclick="openComponentModal('motherboard')">Choose Motherboard</button>
+                </div>
+
+                <!-- 3. Memory (RAM) -->
+                <div class="builder-step-row" id="step-ram">
+                    <div class="step-info-col">
+                        <div class="step-icon-badge"><i class="fa-solid fa-memory"></i></div>
+                        <div class="step-title">
+                            <h4>Memory (RAM)</h4>
+                            <p>DDR5 6000MHz+ RGB Dual Channel Kit</p>
+                            <div class="step-selected-item" id="selected-ram">Not Selected</div>
+                        </div>
+                    </div>
+                    <button class="btn-choose-component" onclick="openComponentModal('ram')">Choose RAM</button>
+                </div>
+
+                <!-- 4. Graphics Card (GPU) -->
+                <div class="builder-step-row" id="step-gpu">
+                    <div class="step-info-col">
+                        <div class="step-icon-badge"><i class="fa-solid fa-vr-cardboard"></i></div>
+                        <div class="step-title">
+                            <h4>Graphics Card (GPU)</h4>
+                            <p>NVIDIA GeForce RTX 40 Series / AMD Radeon</p>
+                            <div class="step-selected-item" id="selected-gpu">Not Selected</div>
+                        </div>
+                    </div>
+                    <button class="btn-choose-component" onclick="openComponentModal('gpu')">Choose GPU</button>
+                </div>
+
+                <!-- 5. Storage (SSD) -->
+                <div class="builder-step-row" id="step-storage">
+                    <div class="step-info-col">
+                        <div class="step-icon-badge"><i class="fa-solid fa-hard-drive"></i></div>
+                        <div class="step-title">
+                            <h4>Storage (NVMe SSD)</h4>
+                            <p>PCIe Gen4 / Gen5 High-Speed M.2 SSD</p>
+                            <div class="step-selected-item" id="selected-storage">Not Selected</div>
+                        </div>
+                    </div>
+                    <button class="btn-choose-component" onclick="openComponentModal('storage')">Choose SSD</button>
+                </div>
+
+                <!-- 6. Power Supply (PSU) -->
+                <div class="builder-step-row" id="step-psu">
+                    <div class="step-info-col">
+                        <div class="step-icon-badge"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="step-title">
+                            <h4>Power Supply (PSU)</h4>
+                            <p>80+ Gold / Platinum Modular ATX 3.0</p>
+                            <div class="step-selected-item" id="selected-psu">Not Selected</div>
+                        </div>
+                    </div>
+                    <button class="btn-choose-component" onclick="openComponentModal('psu')">Choose PSU</button>
+                </div>
+
+                <!-- 7. Casing -->
+                <div class="builder-step-row" id="step-casing">
+                    <div class="step-info-col">
+                        <div class="step-icon-badge"><i class="fa-solid fa-computer"></i></div>
+                        <div class="step-title">
+                            <h4>Casing / Chassis</h4>
+                            <p>Tempered Glass High Airflow Gaming Case</p>
+                            <div class="step-selected-item" id="selected-casing">Not Selected</div>
+                        </div>
+                    </div>
+                    <button class="btn-choose-component" onclick="openComponentModal('casing')">Choose Casing</button>
+                </div>
+            </div>
+
+            <!-- Right: Live Summary & Wattage Calculator -->
+            <aside class="builder-sidebar-summary">
+                <div class="summary-header">
+                    <h3>Custom Build Summary</h3>
+                </div>
+
+                <div class="wattage-box">
+                    <span>Estimated Wattage:</span>
+                    <span id="estimatedWattage" style="color: var(--primary-red); font-weight: 800;">0 W</span>
+                </div>
+
+                <div class="total-price-box">
+                    <div class="label">Total Estimated Cost</div>
+                    <div class="price" id="builderTotalPrice">Rs. 0.00</div>
+                </div>
+
+                <div class="builder-actions">
+                    <button class="btn-action-primary" id="btnBuilderAddToCart">
+                        <i class="fa-solid fa-cart-plus"></i> Add All To Cart
+                    </button>
+                    <button class="btn-action-secondary" onclick="window.print();">
+                        <i class="fa-solid fa-print"></i> Print Quotation
+                    </button>
+                    <button class="btn-action-secondary" onclick="resetBuilder();" style="color: #ef4444;">
+                        <i class="fa-solid fa-rotate-left"></i> Reset Selection
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Component Selection Modal -->
+    <div class="modal-overlay" id="componentModal">
+        <div class="modal-content">
+            <button class="modal-close-btn" onclick="closeComponentModal()"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="modalComponentTitle" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 20px; color: var(--text-dark);">Select Component</h3>
+            <div id="modalComponentList" style="display: flex; flex-direction: column; gap: 12px;">
+                <!-- Populated dynamically by script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Bar -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Column 1 -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 16px;">
+                        <img src="logo.svg" alt="Infonet Computers" style="height: 48px; width: auto; background: white; padding: 5px 12px; border-radius: 8px;">
+                    </div>
+                    <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 20px;">
+                        Infonet Computers is Sri Lanka's trusted tech destination for premium laptops, custom gaming rigs, workstations, and genuine components.
+                    </p>
+                    <div class="footer-hotline-block">
+                        <span>MANAGING DIRECTOR DIRECT LINE</span>
+                        <strong style="color: var(--primary-green);">0776 739 339 (Indika Senadheera)</strong>
+                    </div>
+                    <div class="footer-hotline-block">
+                        <span>EMBILIPITIYA MAIN SHOWROOM</span>
+                        <p style="color: #cbd5e1; font-size: 0.86rem;">New Town Road, Embilipitiya | 071 7 839 339 / 076 7 739 339</p>
+                    </div>
+                    <div class="footer-hotline-block">
+                        <span>PADALANGALA BRANCH</span>
+                        <p style="color: #cbd5e1; font-size: 0.86rem;">Nonagama Road, 42 Junction, Padalangala | 070 6 739 339 / 076 6 139 339</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="branches.html">Our Branches</a></li>
+                        <li><a href="gallery.html">Custom Builds Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="deals.html">Weekly Deals</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-col">
+                    <h4>My Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="shop.html">Track My Order</a></li>
+                        <li><a href="shop.html">Wishlist</a></li>
+                        <li><a href="pc-builder.html">PC Builder Quotation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="deals.html">Payment &amp; Installments</a></li>
+                        <li><a href="contact.html">Warranty Policy</a></li>
+                        <li><a href="contact.html">Returns &amp; Refunds</a></li>
+                        <li><a href="contact.html">Islandwide Delivery</a></li>
+                        <li><a href="contact.html">Support &amp; FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <div>
+                        &copy; 2026 Infonet Computers. All Rights Reserved. Designed for Maximum Performance.
+                    </div>
+                    <div class="payment-icons">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
